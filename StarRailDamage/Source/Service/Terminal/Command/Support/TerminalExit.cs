@@ -4,11 +4,11 @@ using StarRailDamage.Source.Service.Terminal.Abstraction;
 
 namespace StarRailDamage.Source.Service.Terminal.Command.Support
 {
-    public class TerminalClear : TerminalCommand
+    public class TerminalExit : TerminalCommand
     {
-        public override string Name => "clear";
+        public override string Name => "exit";
 
-        public override string FullName => LocalString.ServiceTerminalSupportConsoleClearFullName;
+        public override string FullName => LocalString.ServiceTerminalSupportConsoleExitFullName;
 
         public override string Help => string.Empty;
 
@@ -18,7 +18,7 @@ namespace StarRailDamage.Source.Service.Terminal.Command.Support
 
         public override ITerminalResponse Invoke(ITerminalCommandLine commandLine)
         {
-            return new TerminalResponse(Program.OnTerminal && true.Configure(Console.Clear));
+            return new TerminalResponse(Program.OnTerminal.Configure(Program.OnTerminal = false));
         }
     }
 }
