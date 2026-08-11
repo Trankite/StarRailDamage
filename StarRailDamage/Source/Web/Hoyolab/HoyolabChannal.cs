@@ -2,9 +2,9 @@
 
 namespace StarRailDamage.Source.Web.Hoyolab
 {
-    public enum HoyolabLanguage
+    public enum HoyolabChannal
     {
-        [Description("zh-cn")]
-        Chinese = 1
+        [Description("sr_wiki")]
+        StarRailWiki = 1
     }
 }
